@@ -4343,7 +4343,7 @@ paths:
                   properties:
                     phone:
                       type: string
-                      format: phone
+                      #format: phone
                     email:
                       type: string
                       format: email
@@ -5497,7 +5497,7 @@ components:
         id:
           description: This is the most unique identifier of a service item. An example of an Item ID could be the SKU of a product.
           type: string
-          format: '#/components/schemas/Item/properties/id'
+          #format: '#/components/schemas/Item/properties/id'
         parent_item_id:
           $ref: '#/components/schemas/Item/properties/id'
         descriptor:
@@ -5559,7 +5559,7 @@ components:
     Name:
       type: string
       description: 'Describes the name of a person in format: ./{given_name}/{honorific_prefix}/{first_name}/{middle_name}/{last_name}/{honorific_suffix}'
-      pattern: ^\./[^/]+/[^/]*/[^/]*/[^/]*/[^/]*/[^/]*$
+      #pattern: ^\./[^/]+/[^/]*/[^/]*/[^/]*/[^/]*/[^/]*$
     Offer:
       description: Describes an offer
       type: object
@@ -6004,6 +6004,7 @@ components:
           $ref: '#/components/schemas/Tags'
     Tags:
       description: A simple key-value store which is used to contain extended metadata. However, grouped tags can be created using the recommendations provided in docs/protocol-drafts/BECKN-The-Tags-Schema-Draft-01.md
+      type: object
       additionalProperties:
         type: string
     Time:
